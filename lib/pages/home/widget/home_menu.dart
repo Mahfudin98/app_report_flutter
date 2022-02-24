@@ -1,3 +1,7 @@
+import 'package:app_report/pages/analytic/analytic_page.dart';
+import 'package:app_report/pages/product/list_product.dart';
+import 'package:app_report/pages/report/report_order.dart';
+import 'package:app_report/pages/teams/all_teams.dart';
 import 'package:app_report/theme/colors/light_colors.dart';
 import 'package:app_report/pages/home/widget/card_menu.dart';
 import 'package:flutter/material.dart';
@@ -43,39 +47,71 @@ class HomeMenu extends StatelessWidget {
                           size: 100,
                         ),
                         title: 'Analytic',
+                        onClick: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AnalyticPage(),
+                            ),
+                          );
+                        },
                       ),
-                      SizedBox(width: 20.0),
+                      const SizedBox(width: 20.0),
                       CardMenu(
                         cardColor: LightColors.kRed,
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.add_shopping_cart,
                           color: Colors.white,
                           size: 100,
                         ),
                         title: 'Report Order',
+                        onClick: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ReportOrderPage(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),
                   Row(
                     children: [
-                      const CardMenu(
+                      CardMenu(
                         cardColor: LightColors.kDarkYellow,
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.all_inbox,
                           color: Colors.white,
                           size: 100,
                         ),
                         title: 'List Product',
+                        onClick: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ListProductPage(),
+                            ),
+                          );
+                        },
                       ),
-                      SizedBox(width: 20.0),
+                      const SizedBox(width: 20.0),
                       CardMenu(
                         cardColor: LightColors.kBlue,
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.supervised_user_circle,
                           color: Colors.white,
                           size: 100,
                         ),
                         title: 'All Team',
+                        onClick: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AllTeamsPage(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),
